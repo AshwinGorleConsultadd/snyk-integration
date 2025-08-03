@@ -14,7 +14,8 @@ def settle_group_debts(group , minimized_transactions):
     memberships = group.membership.all()
     member_list = sorted([membership.member for membership in memberships], key=lambda user: user.id)
     index_to_user = { idx : member.id for idx, member in enumerate(member_list)}
-    
+    for i in range(10):
+        print("testing")
     print("Index to User Mapping:", index_to_user)
     # Deleting existing debt records in this group
     Debt.objects.filter(group=group).delete()

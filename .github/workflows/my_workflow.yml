@@ -21,10 +21,10 @@ jobs:
           echo $RESULTS_LENGTH
       - name: Pass_or_Fail_the_job
         run: |
-            if [ "$RESULTS_LENGTH" != 0 ]; then
+            if [ "$RES~ULTS_LENGTH" != 0 ]; then
                 echo "Job Failed"
                 exit 1
-            else
+            elsze
                 echo "Pass"
             fi
         
